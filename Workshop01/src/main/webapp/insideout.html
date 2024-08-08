@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Workshop01</title>
+	<style type="text/css">
+	body{
+		width: 620px;
+		border: 1px solid LightGray;
+		margin: auto;
+		margin-top: 100px;		
+		padding: 25px;
+	}
+	h2{
+		text-align: center;
+		margin-top: -20px;		
+	}
+	#img{
+		text-align: center;
+	}
+	fieldset{
+		width: 560px;
+	}
+	#context{
+		margin-left: 18px;
+	}
+	</style>
+</head>
+<body>
+	<h2>★ ★ ★ ★ 인사이드아웃2 ★ ★ ★ ★</h2>
+	<div id="img">
+		<img alt="inside2" src="./image/insideout.jpg" width="350px">
+	</div>
+	<br>
+	
+	<div id="context">
+		<label>상영관
+	    <select>
+	       	<option value="CGV">CGV&emsp;&emsp;&emsp;</option>
+		</select>
+		</label> 
+	    
+	    &nbsp;
+	    <label>날짜 선택
+	    <input type="date" name="date">
+	    </label> 
+	    
+	    <fieldset>
+	    	<legend>시간선택</legend>
+	    	
+	    	<label><input type="radio" name="time" value="08:30">08:30</label>
+	    	<label><input type="radio" name="time" value="08:30">11:00</label>
+	    	<input type="radio" name="time" value="08:30">14:20
+	    	<input type="radio" name="time" value="08:30">17:25
+	    	<input type="radio" name="time" value="08:30">20:10
+	    	<input type="radio" name="time" value="08:30">23:05
+	    	
+	    	
+	    </fieldset>
+	    
+	    요금&emsp;<del>₩9,000</del>&emsp;₩5,000
+	   	<br><br>
+	    
+	    인원
+	    <input type="number" name="personnel" value="0">
+	    <br><br>
+	    
+	    금액
+	    <input type="number" name="amount" value="0">
+	    <br><br>
+		
+		<input type="checkbox" name="option" value="option" checked> 옵션
+		<br><br>
+			<fieldset>
+				<input type="checkbox" name="popcorn" value="popcorn" checked> 팝콘
+				<input type="checkbox" name="cola" value="cola" checked> 콜라
+			</fieldset>
+	</div>
+</body>
+</html>

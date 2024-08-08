@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>많이 사용하는 폼태그</title>
+<style type="text/css">
+/*
+  1. 폼 전체 사이즈 지정..
+  2. 폼 전체 가운데 정렬
+  3. 내용물의 여백이 다소 있도록..갑갑하지 않도록(패딩)
+  
+  제목..HTML Form Tags
+  1. 글자색
+  폰트사이즈 다시 지정
+  
+  소제목...legend
+  1. 글자색
+  2. 폰트 사이즈 다시 지정
+  
+  fieldset 안에 내용물들도 조금 넉넉하게 보이도록 여백 지정
+*/
+	#frm{
+		width: 600px;
+		margin: auto;
+		padding : 30px;
+		
+	}
+	
+	h2{
+		text-align: center;
+		color: #F2955E;
+		font-size: 42px;
+	}
+	
+	legend{
+		color: #F2DA91;
+		font-size: 30px;
+	}
+	
+	fieldset{
+		padding: 50px;
+	}
+</style>
+</head>
+<body>
+<h2>html form tags...</h2>
+<!-- form 태그에는 입력값을 어디로 전송할지에 대한 파일의 이름이 필요함 -->
+<form id="frm" action="#">
+<fieldset>
+	<legend>employee form data</legend>
+	id : <input type="text" name="id" id="id" value="kosta" readonly="readonly">
+	<br><br>
+	pass : <input type="password" name="pass" id="pass" required="required">
+	<br><br>
+	gender : 
+	<input type="radio" name="gender" value="Female">F
+	<input type="radio" name="gender" value="Male">M
+	<br><br>
+	today : <input type="date" name="date">
+	<br><br>
+	number : <input type="number" name="number">
+	<br><br>
+	guest memo :: 
+	<textarea rows="5" cols="50">
+	intro memo...
+	</textarea>
+	<br><br>
+	<input type="submit" value="send data">
+
+</fieldset>
+</form>
+</body>
+</html>
