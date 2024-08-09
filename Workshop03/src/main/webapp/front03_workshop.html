@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>KOSTA CSS</title>
+	<style type="text/css">
+	.artist>img{
+		width: 43px;
+		height: 43px;
+		margin:0;
+		margin-right: 7px;
+		border: 2px white;
+		border-radius: 12px;	
+	}
+	*{
+		margin-top: 15px;
+				margin-bottom: 15px;
+		
+		background-color: black;
+	}
+	body{
+		margin-left: 3%;
+		margin-right: 3%;
+		
+	}
+	.wrap>.info{
+		margin: 30px;
+	}
+	.hot-badge{
+		background: grey;
+		color: orange;
+		font-size: small;
+		padding: 2px 5px;
+		border: 1px solid grey;
+		border-radius: 6px;	
+		margin-bottom: 5px;
+	}
+	.artist, .description{
+		color: grey;
+	}
+	.play-button{
+		background: #4B1BB0;
+		color: white;
+		padding: 10px 22px;
+		font-size: medium;
+		border: 2px solid #4B1BB0;
+		border-radius: 9px;
+	}
+	.playlist-title{
+		color: white;
+	}
+	header{
+		color: white;
+	}
+	.cover-image{
+		width: 202px;
+		height: 202px;
+	}
+
+	</style>
+</head>
+	<body>
+	<div id="wrap">
+	    <header>
+	      <div class="wrap">Kosta Music</div>
+	    </header>
+	    <br><br>
+	    
+	    <main class="wrap">
+	    
+	      <div class="info">
+	      
+	        <div class="cover">
+	          <img
+	            class="cover-image"
+	            src="./image/cafe.jpg"
+	            alt="카페에서 일할 때 커버 이미지"
+	          >
+	        </div>
+	        
+	        <h1 class="playlist-title">
+	          카페에서 일할 때
+	          <span class="hot-badge"> 인기 </span>
+	        </h1>
+	        
+	        <div class="artist">
+	          <img
+	            src="./image/logo.jpg"
+	            alt="kosta 프로필"
+	            class="artist-profile"
+	          >
+	          	Kosta Coffee
+	        </div>
+	        
+	        <div class="description">
+	          차분하게 흐르는 따뜻한 음악과 함께하는 휴식.KOSTA Music 에디터가
+	          매달 업데이트하는 플레이리스트입니다. 마음에 드는 곳이 있다면 보관함에
+	          추가해 보세요.
+	        </div>
+	        
+	        <button class="play-button">▶️ 지금 듣기</button>
+	        
+	      </div>
+	    </main>
+	</div>
+	</body>
+</html>
