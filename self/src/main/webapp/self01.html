@@ -5,27 +5,66 @@
 	<meta charset="EUC-KR">
 	<title>Insert title here</title>
 	<style type="text/css">
-		
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			width: 89%;
+			margin: 0 auto;
+			font-family: Constantia;
+		}
+		h1{
+			background-color: dodgerblue;
+			color: white;
+			text-align: center;
+		}
+		pre{
+			background-color: tomato;
+			color: white;
+			padding: 27px 25px;
+			font-family: Constantia;
+		}
+		#example{
+			background-color: #eeeaea;
+		}
+		#parent{
+			padding: 16px 14px;
+			margin-bottom: 0;
+		}
+		#child{
+			background-color: whitesmoke;
+			margin: 0px 14px;
+			padding: 20px 40px;
+			font-family: "Courier New";
+			font-weight: bold;
+			border-left: 5px solid #33cd32;
+		}
+		input[type=button]{
+			margin: 20px 0 8px 14px;
+			width: 125px;
+			height: 32px;
+			font-family: Constantia;
+			font-weight: bold;
+			background-color: #4caf50;
+			border: none;
+			color: white;
+		}
 	</style>
 </head>
 
 <body>
-	<h2>CSS Quiz-1</h2>
+	<h1>CSS Quiz-1</h1>
 	
-	<pre>
-Department: Computer Echimeering
+<pre>Department: Computer Echimeering
 Student Name: Hong Kil Dong
-Student ID: 20191029
-	</pre>
+Student ID: 20191029</pre>
 	
-	<p>Example</p>
-	
-	<xmp>
-<h1>Hello World</h1>
-<p>Lorem ipsum...</p>
-	</xmp>
-	
+	<div id="example">
+		<h3 id="parent">Example</h3>
+<xmp id="child"><h1>Hello World</h1>
+<p>Lorem ipsum...</p></xmp>
 		<input type="button" value="Try it Yourself>>" onclick="push()">
+	</div>
 </body>
 
 </html>
