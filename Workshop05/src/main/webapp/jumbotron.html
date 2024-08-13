@@ -26,9 +26,10 @@
 .searchArea{
 	width: 300px;
 	height: 60px;
+	padding: 10px 0;
 }
 .searchArea > form > input{		
-	border: 1px solid black;
+	border: 1px solid white;
 	width: 250px;
 	height: 40px;	
 }
@@ -37,26 +38,45 @@
 		width: 50px;
 		color: rgb(255, 0, 0);;
 		font-weight: bold;
+		text-shadow: 2px 3px 4px black;
+
 }
 	
 .nav{	
-	width:  940px;	  
+
+  
 }
 .nav> li{
-		margin-left: 84px;		
+		margin-left: 84px;	
+
 	}
 .nav>li>a{
 		color: rgb(255, 0, 0);
 		font-size: 18px;
 		font-weight: bold;	
-		text-shadow: black; 	
-		
+		text-shadow: 2px 3px 4px black;
 	}
+.jumbotron{
+	background-image: linear-gradient(rgba(1000,1000,1000,0.3), rgba(1000,1000,1000,0.3)), url(mori.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 300px;
+}
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+.container{
+	margin: 0 auto;
+
+}
 </style>
 </head>
 <body>
 <div class="jumbotron">
-  <div class="container">  	
+  <div class="container" style="margin: 0 5%;">  	
    <div class="header">
 		<div class="searchArea">
 			<form action="#">
