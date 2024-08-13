@@ -215,12 +215,15 @@ p {
 	margin-left: 12px;
 	margin-top: 19px;
 }
-.icon>img{
+.icon>.img-button{
+	background: url("img/icon.png") no-repeat;
 	width: 150px;
 	height: 100px;
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
+	border: none;
+	cursor: pointer;
 
 }
 </style>
@@ -282,7 +285,7 @@ p {
 		</div>
 	</div>
 	<div class="icon">
-		<img src="img/icon.png" alt="우하단 고양이 아이콘">
+		<input type="button" class="img-button" onclick="alert('안녕?')" art="우하단 고양이 아이콘">
 	</div>
 </body>
 </html>
