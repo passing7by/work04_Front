@@ -1,3 +1,11 @@
+<!-- 
+	display: flex
+	1,. justify-content
+	2. flex: 1
+	3. flex-grow: 0 / flex-grow: 1 / flex-grow: 2
+	4. flex-grow: 1 / flex-grow: 2 / flex-grow: 3
+
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,12 +26,28 @@
 		height: 500px;		
 		display: flex;
 		
-		
+		/* justify-content: space-between; */
 	}
 	.box{
 		border-radius: 15px;
 		color: #f9fafc;
 		padding: 30px;
+
+		flex: 1;
+	}
+	.red{
+		background-color: tomato;
+		flex-grow: 0;
+		/* 기본값 (본래 content의 너비) */
+	}
+	.green{
+		background-color: rgb(31, 255, 31);
+		flex-grow: 1;
+
+	}
+	.blue{
+		background-color: rgb(76, 76, 255);
+		flex-grow: 2;
 	}
 
 </style>
