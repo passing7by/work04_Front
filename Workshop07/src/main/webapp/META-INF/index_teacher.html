@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="euc-kr">
-<title>Dynamic Table</title>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
  <!-- Link CSS -->
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
 </head>
 <body>
  <!-- Main Data Table -->
@@ -82,11 +83,26 @@
         <!-- Update Button -->
         <div class="updateBtn">
             <button  onclick="editTableDisplay()">Update data</button>
-        </div>     
-		
-		 <!-- Edit table -->
+        </div>
         
+     <!-- Edit table -->
+    <div class="editTable">
+        <div class="left">Employee Number: </div><div class="right"><input type="text" name="number" id="number"></div><br><br>
+        <div class="left">Employee Name: </div><div class="right"><input type="text" name="name" id="name"></div><br><br>
+        <div class="left">JOB: </div><div class="right"><input type="text" name="job" id="job"></div><br><br>
+         <div class="left">Address: </div><div class="right"><input type="text" name="country" id="country"></div><br><br>
+        <div class="left">Phone Number: </div><div class="right"><input type="number" name="phone" id="phone"></div><br><br>
+        <button onclick="editRow();" class="editRowBtn">Update</button><br><br>
+    </div>   
 </body>
+<script type="text/javascript">
+	function editTableDisplay() {
+		 document.querySelector('.editTable').setAttribute('style', 'display: block;');
+		 const table = document.getElementById('table');
+		 const table_row = table.rows.length;
+		 alert(table_row);
+	}	
+</script>
 </html>
 
 
