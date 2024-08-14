@@ -1,0 +1,42 @@
+<!-- 
+1. 복합연산자 ( ex . a += '')
+2. innerHTML
+3. qutySelector(), getElementById() (너무 중요!!)
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script type="text/javascript">
+        window.onload = ()=>{ //window.은 생략 가능
+            var list = '';
+            //1. 복합연산자
+            list +='<ul>';
+            list +='<li>아메리카노</li>';
+            list +='<li>카페라떼</li>';
+            list +='<li>카페모카</li>';
+            list +='<li>카라멜마끼아또</li>';
+            list +='<ul>';
+        
+            //2. document 특정 엘레먼트를 찾아서
+            // document.getElementById("wrap").innerHTML = list;
+            document.querySelector("#wrap").innerHTML = list; //querySelector()를 더 많이 사용함...
+        }
+    </script>
+        <!-- body 안에다가도 작성 가능, head 안에는 작성 불가
+        (이유 : wrap 부분을 찾기 위해서는, 이 부분이 메모리에 다 올라간 뒤에 찾아야 함
+        (스트립트는 위->아래로 읽어들어감))
+        head 안에 작성하려면 window.onload() 사용! -->
+        
+        <!-- window.onload는 html의 모든 부분을 올림???? -->
+</head>
+
+<body>
+    <h2 align="center">========= onload ========</h2>
+    <div id="wrap">
+    </div>
+</body>
+</html>
+

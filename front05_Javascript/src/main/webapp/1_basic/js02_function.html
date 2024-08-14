@@ -1,0 +1,66 @@
+<!-- 
+    자바스트립트에서 함수를 정의하는 방법
+    ::
+    1. 선언적 함수 정의
+    2. 익명 함수 정의
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script type="text/javascript">
+        //1. 선언적 함수의 재정의 (overring)
+        /*
+        function func(){
+            alert("func A...");
+        }
+
+        func();
+
+        function func(){
+            alert("func B...");
+        }
+
+        func();
+        */
+
+        
+
+        func();
+
+        function func(){
+            alert("func A...");
+        }
+
+        function func(){
+            alert("func B...");
+        }
+        //선언적 함수 - 위-> 아래로 실행하기 전에, 미리 메모리에 올라감 (메모리 할당 순서가 다름)
+        //  => 호출 라인이 어디든 상관 X
+
+        //2. 익명 함수 재정의
+        /*
+        func();
+        var func= function() {
+            alert("func A...");
+        }
+        //호출 안 됨 - 메모리에 위->아래 순서대로 올림 => 정의한 다음 호출해야 함
+        */
+       /*
+        var func= function() {
+            alert("func A...");
+        }
+        var func= function() {
+            alert("func B...");
+        }
+        func();
+        */
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
