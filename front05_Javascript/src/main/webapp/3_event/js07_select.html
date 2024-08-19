@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>setInterval() :: 특정한 간격을 두고 함수를 주기적으로 호출...</title>
+    <script>
+      //'당신은 ~호선을 타고 출근합니다' 라고 출력
+      function changeLine() {
+        //1. select 폼을 받아 와서 변수 subway에 할당
+        let subway = document.querySelector("#subway");
+        //2. 폼에서 선택한 값을 alert 창으로 출력
+        if (subway.value != null)
+          alert("당신은 " + subway.value + "호선을 타고 출근합니다.");
+        else alert("출퇴근 하는 지하철 노선을 선택해 주세요");
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>select form</h2>
+    <form action="#" name="frm">
+      <!-- 
+      select 폼은 클릭 이벤트 적용 안 됨
+      아이템이 변경될때마다 그걸 이벤트로 지정해야 함
+      onchange()
+      -->
+      <select id="subway" onchange="changeLine()">
+        <option value="=====">===== 지하철 호선 ====</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </form>
+  </body>
+</html>

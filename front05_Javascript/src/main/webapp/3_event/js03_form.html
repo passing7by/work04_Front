@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script>
+      function showName() {
+        //1. 폼에 입력된 값을 받아서 변수(nick)에 할당...alert()로 확인
+        // let nick = document.querySelector("#nick").value;
+        let nick = document.querySelector("#nick");
+        // document.frm.nick.value; - 강사님 코드
+        alert("#nick");
+
+        //2. 다시 폼 안에 입력된 값을 초기화
+        // document.querySelector("#nick").value = "";
+        nick.value = ""; // 내 코드 -> 됨 (.value 전까지만 nick에 할당한 다음에 .value로 초기화하려는 경우)
+        //nick = ""; - 내 코드 -> 안 됨 (.value로 값 자체를 받아와서 nick에 할당한 다음에 초기화하려는 경우)
+        //document.frm.nick.value = ""; - 강사님 코드
+
+        //3. 마우스 커서가 다시 폼에 지정되도록
+        document.querySelector("#hobby").focus();
+        // document.frm.hobby.focus(); - 강사님 코드
+      }
+
+      function showHobby() {
+        //1. 폼에 입력된 값을 받아서 변수(nick)에 할당...alert()로 확인
+        //2. 다시 폼 안에 입력된 값을 초기화
+        //3. 마우스 커서가 다시 폼에 지정되도록
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>Form Event Handing..</h2>
+
+    <form action="#" name="frm">
+      닉네임<input type="text" name="nick" id="nick" />
+      <input type="button" value="닉네임보기" onclick="showName()" />
+      <br /><br />
+
+      취미<input type="text" name="hobby" id="hobby" />
+      <input type="button" value="취미보기" onclick="showHobby()" />
+    </form>
+  </body>
+</html>

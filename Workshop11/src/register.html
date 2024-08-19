@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- article.css | nav.css |  footer.css 외부 파일 연결 -->
+
+    <style>
+      #register {
+        margin-top: 5px;
+        padding: 20px 0px;
+      }
+
+      #register h1 {
+        padding: 5px;
+        text-align: center;
+      }
+
+      #register form {
+        display: block;
+        width: 100%;
+        height: 300px;
+        border: 1px solid lightgrey;
+        padding: 40px;
+      }
+
+      #register .form-item {
+        margin-bottom: 10px;
+      }
+
+      #register .form-item label {
+        display: inline-block;
+        width: 150px;
+        font-size: 18px;
+      }
+
+      #register .form-item input {
+        display: inline-block;
+        width: 250px;
+        font-size: 18px;
+      }
+
+      #register button {
+        margin-top: 10px;
+        padding: 5px;
+        float: right;
+        width: 100px;
+        font-size: 18px;
+      }
+    </style>
+    <script type="text/javascript">
+      function btn() {
+        location.href = "index.html";
+      }
+
+      //pdf 보고 코드 작성.. 완성된 코드 긁어서 슬랙
+      // function register() {
+      //   let id = this.closest(".form-item").attributes["required"];
+      //   id = true;
+
+      //   document.querySelectorAll(".form-item").forEach(function (item) {
+      //     item.onclick = function () {
+      //       let id = this.closest(".main-menu").attributes["id"].value;
+      //       //.attributes["id"] : id 속성의 부분을 얻어 옴
+      //       //.attributes["id"].value : id 속성에 할당 된 값을 얻어 옴
+      //       alert(id);
+      //     };
+      //   });
+      // }
+
+      function register() {
+        let password = document.querySelector("#password");
+        let password2 = document.querySelector("#password2");
+
+        if(password.value != password2.value){
+          alert("비밀번호가 일치하지 않습니다");
+
+          document.querySelectorAll("[type='password']").forEach(funciton(item, index){
+            item.value="";
+          });
+          password.focus();
+          return;
+        } //if
+
+
+      }
+    </script>
+
+    <title>IT's KB - register</title>
+  </head>
+  <body>
+    <div id="container">
+      <nav>
+        <ul>
+          <li class="nav-item logo"><img src="logo.jpg" alt="" /></li>
+          <li class="nav-item">개인</li>
+          <li class="nav-item">기업</li>
+          <li class="nav-item">로그인</li>
+          <li class="nav-item">회원가입</li>
+        </ul>
+      </nav>
+      <div id="banner">지금 당신의 행복! IT's KB Life!</div>
+      <div id="register">
+        <h1>Register</h1>
+        <form action="">
+          <div class="form-item">
+            <label for="name">이름</label>
+            <input type="text" id="name" />
+          </div>
+
+          <div class="form-item">
+            <label for="email">이메일</label>
+            <input type="email" id="email" />
+          </div>
+
+          <div class="form-item">
+            <label for="phone">연락처</label>
+            <input type="text" id="phone" />
+          </div>
+
+          <div class="form-item">
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" />
+          </div>
+
+          <div class="form-item">
+            <label for="password2">비밀번호 확인</label>
+            <input type="password" id="password2" />
+          </div>
+
+          <hr />
+          <button type="submit" onclick="register()">회원 가입</button>
+
+          <button type="button" onclick="btn()">홈</button>
+        </form>
+      </div>
+      <footer>
+        <ul>
+          <li class="address">12345 address 1 address 2 address 3</li>
+          <li class="phone">02-0000-0000</li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

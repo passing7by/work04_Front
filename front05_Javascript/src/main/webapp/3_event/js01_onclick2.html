@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>2. button onclick 속성 사용하지 않는 경우</title>
+  </head>
+
+  <body>
+    <h1>자바스크립트란?</h1>
+    <p id="content">
+      자바스크립트를 사용해서 html 바디 부분의 내용을 변경합니다.
+    </p>
+    <button>CLICK ME</button>
+  </body>
+
+  <!-- body가 생성되기 전에 button 속성을 지정해야 함 -->
+  <script>
+    //1. button 엘러먼트 부분을 클릭하면 push 함수가 호출되도록...
+    document.querySelector("button").onclick = push;
+    // push 뒤에 ()가 없음...onclick을 할 때 push가 호출되도록 매핑하는 것임
+    // (함수에 ()을 붙이지 않음 => 이 라인에서는 함수를 호출은 하지 않는다는 것을 의미)
+
+    function push() {
+      let content = document.querySelector("#content");
+      alert(content);
+      content.innerHTML =
+        "<H3><font color=red>Hello JavaSctipt Event</font></H3>";
+    }
+  </script>
+</html>

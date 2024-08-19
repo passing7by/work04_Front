@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>1. button onclick 속성에 함수 연결</title>
+    <script>
+      function push() {
+        //1. content 부분에 엘러먼트를 받아와서
+        let content = document.querySelector("#content");
+        alert(content);
+        //2. 받아온 부분의 영역에 Hello JavaSctipt Event 내용으로 변경... 글자색을 빨강으로 지정
+        content.innerHTML =
+          "<H3><font color=red>Hello JavaSctipt Event</font></H3>";
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>자바스크립트란?</h1>
+    <p id="content">
+      자바스크립트를 사용해서 html 바디 부분의 내용을 변경합니다.
+    </p>
+    <button onclick="push()">CLICK ME</button>
+  </body>
+</html>

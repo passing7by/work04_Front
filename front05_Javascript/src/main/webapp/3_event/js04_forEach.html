@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script>
+      function choiceMenu() {
+        /*
+        let menu = document.frm.menu;
+        alert(menu.length); //4가 리턴됨 (=> document.frm.menu은 Array가 리턴되는 것)
+        */
+
+        //내가 선택한 메뉴를 alert 창으로 출력...for 사용
+        /*
+        for (let i = 0; i < menu.length; i++) {
+          if (menu[i].checked) {
+            //선택한 메뉴라면...
+            //menu[i].checked -> 폼을 의미 (폼.value이어야만 값을 의미)
+            alert(menu[i].value);
+          }
+        }
+          */
+
+        //1. for문을 사용...내가 선택한 메뉴가 alert창이 한 번 뜨고 메뉴가 다 출력되도록
+        /*
+        let str = "";
+        for (let i = 0; i < menu.length; i++) {
+          if (menu[i].checked) {
+            //선택한 메뉴라면...
+            //menu[i].checked -> 폼을 의미 (폼.value이어야만 값을 의미)
+            str += menu[i].value + ", ";
+
+            menu[i].checked = false;
+          }
+        }
+        if (str == "") alert("하나 이상의 메뉴는 반드시 선택해 주세요");
+        else alert(str);
+        */
+
+        //3. foreach() 사용해서 동일한 겲과가 출려고디도록 로직 작성
+        /*
+        let str = "";
+        menu.forEach((element) => {
+          if (element.checked) {
+            str += element.value + " ";
+          }
+          element.checked = false;
+        });
+        if (str == "") alert("하나 이상의 메뉴는 반드시 선택해 주세요");
+        else alert(str);
+        */
+
+        let menus = document.frm.menu; //배열 이름은 복수로 선언
+        menus.forEach((menu) => {
+          //배열 안의 폼 하나하나가 애로우 왼쪽의 (menu)에 들어감
+          if (element.checked) {
+            str += element.value + " ";
+          }
+          menu.checked = false;
+        });
+        if (str == "") alert("하나 이상의 메뉴는 반드시 선택해 주세요");
+        else alert(str);
+
+        //2. 확인을 누른 후 다시 체크박스가 초기화되도록
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>Checkbox Form</h2>
+
+    <form action="#" name="frm">
+      <strong>오늘 점심 드시고 싶은 메뉴를 고르세요. </strong><br /><br />
+      <input type="checkbox" name="menu" value="초밥" class="menu" />초밥<br />
+      <input type="checkbox" name="menu" value="우동" class="menu" />우동<br />
+      <input
+        type="checkbox"
+        name="menu"
+        value="짜장면"
+        class="menu"
+      />짜장면<br />
+      <input
+        type="checkbox"
+        name="menu"
+        value="카레라이스"
+        class="menu"
+      />카레라이스<br />
+      <input type="button" value="선택" onclick="choiceMenu()" />
+    </form>
+  </body>
+</html>
