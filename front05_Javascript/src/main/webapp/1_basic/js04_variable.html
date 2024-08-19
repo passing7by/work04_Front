@@ -1,0 +1,39 @@
+<!-- 
+ 변수
+ㅣㅣ::
+전역변수
+멤버ㅅㅅ후
+지역변수
+상수
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script type="text/javascript">
+        var name = "Peter"; //var 붙임 - 전역일수도, 로컬일수도 있음. (이 라인의 변수는 전역변수)
+        myName = "James"; //var 안 붙임 - 안 붙여도 변수 선언이 되고, 안 붙인 변수는 자동으로 전역변수가 됨
+
+        console.log(name);
+        console.log(myName);
+
+        showInfo();
+        function showInfo(){
+            var age = 33; //var 붙임 - 전역일수도, 로컬일수도 있음. (이 라인의 변수는 지역변수)
+            myAge = 22; //var 안 붙임 - 안 붙여도 변수 선언이 되고, 안 붙인 변수는 자동으로 전역변수가 됨
+
+            // console.log("name" + name + "," + age);
+            // console.log("name" + myName + "," + myAge);
+        }
+
+        // console.log(age); //에러 남
+        console.log(myAge); //에러 안 남
+        
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

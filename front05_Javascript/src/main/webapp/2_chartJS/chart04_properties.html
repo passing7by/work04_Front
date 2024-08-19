@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style type="text/css">
+      /* convas에는 cass 적용이 되지 않음
+        사이즈 줄어들지 않음
+        
+        convas dml qnahdythfmf aksemfrh rm rhtdp ㅊㄴㄴ wjrdydgodi gka*/
+      /* .line-chart {
+        width: 200px;
+        height: 200px;
+      } */
+      .chart-container {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 140px;
+        /* background-color: yellow; */
+      }
+    </style>
+    <!-- Chart Js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- css 링크는 js 링크 밑에... -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="chart-container">
+      <canvas id="line-chart"></canvas>
+    </div>
+
+    <script>
+      const ctx = document.getElementById("line-cahrt");
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Smith", "Ford", "Turmer", "King", "Adams"],
+          datasets: [
+            {
+              label: "Employee Salary",
+              data: [1200, 3000, 2400, 5000, 2600],
+              borderWidth: 2,
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>

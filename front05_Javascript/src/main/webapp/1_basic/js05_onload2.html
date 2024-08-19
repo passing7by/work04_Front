@@ -1,0 +1,37 @@
+<!-- 
+1. 복합연산자 ( ex . a += '')
+2. innerHTML
+3. qutySelector(), getElementById() (너무 중요!!)
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        //html 모든 요소들이 메모리에 올라가고 나서 이 부분이 실행되도록...JQuery
+        $(document).ready(function(){
+            var list = '';
+            //1. 복합연산자
+            list +='<ul>';
+            list +='<li>아메리카노</li>';
+            list +='<li>카페라떼</li>';
+            list +='<li>카페모카</li>';
+            list +='<li>카라멜마끼아또</li>';
+            list +='<ul>';
+        
+            //2. document 특정 엘레먼트를 찾아서
+            // document.getElementById("wrap").innerHTML = list;
+            document.querySelector("#wrap").innerHTML = list; //querySelector()를 더 많이 사용함...
+        });
+    </script>
+</head>
+
+<body>
+    <h2 align="center">========= onload ========</h2>
+    <div id="wrap">
+    </div>
+</body>
+</html>
