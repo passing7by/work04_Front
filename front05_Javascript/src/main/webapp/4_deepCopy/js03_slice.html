@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script>
+      const a = [1, 2, 3];
+      const b = [10, ...a, 100];
+
+      console.log(`a ==> ${a}`);
+      console.log(`b ==> ${b}`);
+
+      const b2 = a.concat(100);
+
+      console.log(`b2 ==> ${b2}`);
+      //concat은 뒤에만 값을 추가할 수 있음 | spread는 기존 값의 앞, 뒤에 값을 추가할 수 있음. 또한, 기존 값을 찢어서 중간에 추가할 수도 있음
+
+      console.log("==== 1. spread 연산자 응용 ::  ====");
+      const result = [b.slice(0, 2), 7, 8, b.slice(3, 5)]; //to do : 수정 필요
+      console.log(`result ==> ${result}`);
+    </script>
+  </head>
+
+  <body></body>
+</html>
