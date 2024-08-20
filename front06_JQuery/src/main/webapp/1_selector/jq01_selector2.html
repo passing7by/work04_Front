@@ -21,11 +21,15 @@
           $("h2>span").css("background-color", "lightgray");
 
           //5. 첫번째 p 태그에만 속성 지정
+          //html()은 자바스크립트에서 innerHT<ML과 동일 기능
+          //val()은 자바스크립트에서 value과 동일 기능 => form값을 핸들링할 때만 val()를 써야 함
+          //text()와 html()의 차이? - 태그가 먹는지 안먹는지
+
           // $("p").first().html("첫번째 문장").css("color", "tomato");
           $("p:first").html("첫번째 문장").css("color", "tomato");
-          $("p:eq(1)").html("두번째 문장");
+          $("p:eq(1)").text("<h2>두번째 문장</h2>");
 
-          $("p").last().html("마지막 문장").css("color", "tomato");
+          $("p").last().html("<h2>마지막 문장<h2>").css("color", "tomato");
 
           //6. 버튼을 더이상 보이지 않게..
           $("button").css("display", "none");
