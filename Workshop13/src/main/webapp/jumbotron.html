@@ -157,8 +157,8 @@
           transition: 1s ease; */
         /* transform: skew(-16deg);
           transition: 1s ease; */
-        /* transform: scale(0.8);
-          transition: 1s ease; */
+        transform: scale(1.05);
+        transition: 0.7s ease;
         /* transform: matrix(0,1,1,0,0,0);
           transition: 1s ease; */
         /* border-radius: 50%;
@@ -166,14 +166,26 @@
       }
       /* 기능 2. */
       .icons li {
-        transition: 1s ease;
+        transition: 0.7s ease;
       }
       .icons:hover > :not(:hover) {
-        filter: blur(8px);
+        filter: blur(5px);
       }
       /* 기능 3. */
       body {
         cursor: url("image/cursor\ \(3\).cur"), auto;
+      }
+      /*  */
+      /* width */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      /* handle */
+      ::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 10px;
+        height: 90px;
       }
     </style>
   </head>
@@ -209,6 +221,7 @@
             <div class="icon_img">
               <img src="./image/home1.jpg" />
             </div>
+            <br />
             <div class="contents1_bold">은둔가의 집</div>
             <div class="contents2">
               주변 자연의 소박한 아름다움을 담았습니다.
@@ -219,6 +232,7 @@
             <div class="icon_img">
               <img src="./image/home2.jpg" />
             </div>
+            <br />
             <div class="contents1_bold">소소한 일상의 행복</div>
             <div class="contents2">
               우리는 언제든지 함께 마음의 평화를 얻습니다.
@@ -229,6 +243,7 @@
             <div class="icon_img">
               <img src="./image/home3.jpg" />
             </div>
+            <br />
             <div class="contents1_bold">가꾸기</div>
             <div class="contents2">다량의 수확 보다는 조금씩 만들어갑니다.</div>
           </li>
