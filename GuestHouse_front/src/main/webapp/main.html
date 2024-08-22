@@ -4,8 +4,13 @@
     <meta charset="EUC-KR" />
     <title>Insert title here</title>
 
-    <link rel="stylesheet" type="text/css" href="./main.css">
-    
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+
+    <script
+      src="https://kit.fontawesome.com/62f0a6b856.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- slick css cdn -->
     <link
       rel="stylesheet"
@@ -35,9 +40,9 @@
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    
-    <style type="text/css">
-    /* 6. 슬릭 슬라이드 버튼 */
+
+    <style>
+      /* 6. 슬릭 슬라이드 버튼 */
       .slick-prev:before,
       .slick-next:before {
         color: black;
@@ -62,18 +67,24 @@
   <body>
     <!-- 1. 사이드 바 -->
     <div class="sideBar">
-      <p class="wellcomeMsg">oo님 환영합니다.</p>
+      <div class="wellcomeMsg"><p>oo님 환영합니다.</p></div>
+      <br /><br /><br /><br />
 
-      <div class="category">
-        <p>카테고리</p>
-        <p>지역별</p>
-        <p>가격별</p>
-        <p>만족도별</p>
-      </div>
+      <div class="menu"><p>메인화면</p></div>
+      <br /><br />
 
-      <div class="myPage">마이페이지</div>
+      <ul class="menu">
+        <p>여행가이드</p>
+        <li class="travelGuide" id="loction"><p>지역별</p></li>
+        <li class="travelGuide" id="price"><p>가격별</p></li>
+        <li class="travelGuide" id="score"><p>만족도별</p></li>
+      </ul>
+      <br /><br />
 
-      <div class="customerCenter">고객센터</div>
+      <div class="menu"><p>마이페이지</p></div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+
+      <div class="menu"><p>고객센터</p></div>
     </div>
 
     <!-- 2. 콘텐츠 페이지 -->
@@ -81,10 +92,17 @@
       <!-- 2-1. 헤더 -->
       <div class="header">
         <h1 class="title">Nestly</h1>
-        <div class="search">
+        <!-- <div class="search">
           <input type="search" />
           <input type="button" />
-        </div>
+        </div> -->
+        <form class="search-box" action="" method="">
+          <input class="search-txt" type="text" name="" placeholder="search" />
+          <button
+            class="search-btn fa-solid fa-magnifying-glass"
+            type="submit"
+          ></button>
+        </form>
       </div>
 
       <!-- 2-2. 컨테이너 -->
