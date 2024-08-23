@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -42,7 +45,7 @@
     ></script>
 
     <style>
-      /* 6. ½½¸¯ ½½¶óÀÌµå ¹öÆ° */
+      /* 6. ìŠ¬ë¦­ ìŠ¬ë¼ì´ë“œ ë²„íŠ¼ */
       .slick-prev:before,
       .slick-next:before {
         color: black;
@@ -51,46 +54,34 @@
         height: 500px;
       }
     </style>
-
-    <script>
-      $(function () {
-        $(".autoplay").slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 3000,
-          //ÀÌ¹ÌÁö ½½¶óÀÌµå ¾Ö´Ï¸ÞÀÌ¼Ç
-        });
-      });
-    </script>
   </head>
 
   <body>
-    <!-- 1. »çÀÌµå ¹Ù -->
+    <!-- 1. ì‚¬ì´ë“œ ë°” -->
     <div class="sideBar">
-      <div class="wellcomeMsg"><p>oo´Ô È¯¿µÇÕ´Ï´Ù.</p></div>
+      <div class="wellcomeMsg"><p>${param.id}ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤.</p></div>
       <br /><br /><br /><br />
 
-      <div class="menu"><p>¸ÞÀÎÈ­¸é</p></div>
+      <div class="menu"><p>ë©”ì¸í™”ë©´</p></div>
       <br /><br />
 
       <ul class="menu">
-        <p>¿©Çà°¡ÀÌµå</p>
-        <li class="travelGuide" id="loction"><p>Áö¿ªº°</p></li>
-        <li class="travelGuide" id="price"><p>°¡°Ýº°</p></li>
-        <li class="travelGuide" id="score"><p>¸¸Á·µµº°</p></li>
+        <p>ì—¬í–‰ê°€ì´ë“œ</p>
+        <li class="travelGuide" id="loction"><p>ì§€ì—­ë³„</p></li>
+        <li class="travelGuide" id="price"><p>ê°€ê²©ë³„</p></li>
+        <li class="travelGuide" id="score"><p>ë§Œì¡±ë„ë³„</p></li>
       </ul>
       <br /><br />
 
-      <div class="menu"><a href="./mypage.html">¸¶ÀÌÆäÀÌÁö</a></div>
+      <div class="menu"><a href="./mypage.html">ë§ˆì´íŽ˜ì´ì§€</a></div>
       <br /><br /><br /><br /><br /><br /><br /><br />
 
-      <div class="menu"><p>°í°´¼¾ÅÍ</p></div>
+      <div class="menu"><p>ê³ ê°ì„¼í„°</p></div>
     </div>
 
-    <!-- 2. ÄÜÅÙÃ÷ ÆäÀÌÁö -->
+    <!-- 2. ì½˜í…ì¸  íŽ˜ì´ì§€ -->
     <div class="page">
-      <!-- 2-1. Çì´õ -->
+      <!-- 2-1. í—¤ë” -->
       <div class="header">
         <h1 class="title">Nestly</h1>
         <!-- <div class="search">
@@ -106,43 +97,43 @@
         </form>
       </div>
 
-      <!-- 2-2. ÄÁÅ×ÀÌ³Ê -->
-      <!-- spanÀ» ÀÌ¹ÌÁö ÆÄÀÏ·Î º¯°æ ÇÊ¿ä -->
+      <!-- 2-2. ì»¨í…Œì´ë„ˆ -->
+      <!-- spanì„ ì´ë¯¸ì§€ íŒŒì¼ë¡œ ë³€ê²½ í•„ìš” -->
       <div class="container">
         <div class="recommend">
           <div class="recomTitle">
             <h3>Most Nestly</h3>
             <span></span>
-            <p>ÇÑ ´Þ°£ ¸¹Àº ¹æ¹®ÀÚ°¡ ´Ù³à°£ °Ô½ºÆ®ÇÏ¿ì½º</p>
+            <p>í•œ ë‹¬ê°„ ë§Žì€ ë°©ë¬¸ìžê°€ ë‹¤ë…€ê°„ ê²ŒìŠ¤íŠ¸í•˜ìš°ìŠ¤</p>
           </div>
 
           <div class="autoplay">
             <div class="item">
               <img src="./img/most_nestly.jpg" />
-              <p>³ó´ã½ºÅ×ÀÌ</p>
+              <p>ë†ë‹´ìŠ¤í…Œì´</p>
               <p>30,000</p>
-              <p>°æÁÖ</p>
+              <p>ê²½ì£¼</p>
             </div>
 
             <div class="item">
               <img src="./img/most_nestly1.jfif" />
-              <p>³ó´ã½ºÅ×ÀÌ</p>
+              <p>ë†ë‹´ìŠ¤í…Œì´</p>
               <p>30,000</p>
-              <p>°æÁÖ</p>
+              <p>ê²½ì£¼</p>
             </div>
 
             <div class="item">
               <img src="./img/most_nestly2.png" />
-              <p>³ó´ã½ºÅ×ÀÌ</p>
+              <p>ë†ë‹´ìŠ¤í…Œì´</p>
               <p>30,000</p>
-              <p>°æÁÖ</p>
+              <p>ê²½ì£¼</p>
             </div>
 
             <div class="item">
               <img src="./img/most_nestly3.jfif" />
-              <p>³ó´ã½ºÅ×ÀÌ</p>
+              <p>ë†ë‹´ìŠ¤í…Œì´</p>
               <p>30,000</p>
-              <p>°æÁÖ</p>
+              <p>ê²½ì£¼</p>
             </div>
           </div>
         </div>
@@ -153,42 +144,52 @@
           <div class="recomTitle">
             <h3>Top Scores</h3>
             <span></span>
-            <p>ÇÑ ´Þ°£ ³ôÀº ÆòÁ¡À» ¹ÞÀº °Ô½ºÆ®ÇÏ¿ì½º</p>
+            <p>í•œ ë‹¬ê°„ ë†’ì€ í‰ì ì„ ë°›ì€ ê²ŒìŠ¤íŠ¸í•˜ìš°ìŠ¤</p>
           </div>
 
           <div class="autoplay">
             <div class="item">
               <img src="./img/most_reser.png" />
-              <p>³ó´ã½ºÅ×ÀÌ</p>
+              <p>ë†ë‹´ìŠ¤í…Œì´</p>
               <p>30,000</p>
-              <p>°æÁÖ</p>
+              <p>ê²½ì£¼</p>
             </div>
 
             <div class="item">
               <img src="./img/most_reser1.jpg" />
-              <p>³ó´ã½ºÅ×ÀÌ</p>
+              <p>ë†ë‹´ìŠ¤í…Œì´</p>
               <p>30,000</p>
-              <p>°æÁÖ</p>
+              <p>ê²½ì£¼</p>
             </div>
 
             <div class="item">
               <img src="./img/most_reser2.jpg" />
-              <p>³ó´ã½ºÅ×ÀÌ</p>
+              <p>ë†ë‹´ìŠ¤í…Œì´</p>
               <p>30,000</p>
-              <p>°æÁÖ</p>
+              <p>ê²½ì£¼</p>
             </div>
 
             <div class="item">
               <img src="./img/most_reser1.jpg" />
-              <p>³ó´ã½ºÅ×ÀÌ</p>
+              <p>ë†ë‹´ìŠ¤í…Œì´</p>
               <p>30,000</p>
-              <p>°æÁÖ</p>
+              <p>ê²½ì£¼</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <script src="./main.js"></script>
   </body>
 </html>
+
+<script>
+  $(".autoplay").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    //ì´ë¯¸ì§€ ìŠ¬ë¼ì´ë“œ ì• ë‹ˆë©”ì´ì…˜
+  });
+
+  alert("í™˜ì˜í•©ë‹ˆë‹¤!");
+</script>

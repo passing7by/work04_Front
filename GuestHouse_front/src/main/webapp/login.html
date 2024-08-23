@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-<style type="text/css">
-body {
-	background: url("img/login_background.png") center no-repeat;
-}
+	<meta charset="UTF-8">
+	<title>login</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="css/login.css" />
+	<script type="text/javascript">
+		$(function() {
+	
+				
+				$('#video').attr('autoplay', 'autoplay');
+	
+			
+			$('[name=Login]').on('click', function() {
+				var id = $('#id').val();
+				var password = $('#password').val();
+				localStorage.setItem(password, id);
+				
+			});
 
-.backboard {
-	width: 1269px;
-	height: 856px;
-	background-color: rgba(255, 255, 255, 0.6);
-}
-
-.SignInback {
-	width: 552px;
-	height: 772px;
-	background-color: #F3E8DC;
-}
-</style>
+			$('h3').on('click',function(){
+				localStorage.clear();
+			})
+		});//ready
+	</script>
 </head>
+
 <body>
 	<div class="backboard">
 		<div class="SignInback">
-			<h2>Sign In</h2>
-
-			<form action="#">
-				<img id="user" alt="" src="img/user.png"> <input type="text" value="id">
-				<img id="password" alt="" src="img/padlock.png"> <input type="text"
-					value="password"
-				>
-			</form>
-			<button>Sign In</button>
+			<h1>Log In</h1>
+			<form  action="main.jsp" class="login">
+				
+				<div class="login__field">
+				  <i class="bx bx-user login__icon"></i>
+				  <input type="text" class="login__input" id="id"  value="User name / Email"  onfocus="this.value=''" required="required">
+				</div>
+				<div class="login__field">
+				  <i class="bx bx-lock login__icon"></i>
+				  <input type="password" class="login__input" id="password" value="Password"  onfocus="this.value=''" required="required">
+				</div>
+				<button class="button login__submit" name="Login" type="submit">
+				  <span class="button__text">Log In Now</span>
+				  <i class="button__icon fas fa-chevron-right"></i>
+				</button>       
+			  </form>
 		</div>
-		<h2>Nestly</h2>
-		<h4>Æí¾ÈÇÑ ²Ş, ¿©À¯·Î¿î ÈŞ½Ä</h4>
-		<video src="media/healing1.mp4"></video>
-
+		<div class="container">
+			<div>
+				<h3>Nestly</h3>
+				<h4>í¸ì•ˆí•œ ê¿ˆ, ì—¬ìœ ë¡œìš´ íœ´ì‹</h4>
+			</div>
+			<video id="video" src="media/healing1.mp4"></video>
+		</div>
 	</div>
 </body>
+
 </html>
