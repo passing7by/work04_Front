@@ -28,8 +28,9 @@ body > * {
   /* border: 1px solid gray; */
 }
 .recommend * {
-/*  border: 1px solid gray;
-*/}
+  /*  border: 1px solid gray;
+*/
+}
 .sideBar * {
   /* border: 1px solid gray; */
 }
@@ -104,7 +105,7 @@ body {
   font-family: "jejumyeongjo", serif;
   padding: 30px 0;
   width: 1000px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 .header > h1 {
   font-size: 100px;
@@ -142,9 +143,10 @@ body {
 
 /* 4. content */
 .content {
-/*  padding: 0 50px;
-*/  width: 1000px;
-   margin: auto; 
+  /*  padding: 0 50px;
+*/
+  width: 1000px;
+  margin: auto;
 }
 
 /* 5. recommend */
@@ -155,8 +157,7 @@ body {
 .recomTitle {
   display: flex;
   align-items: baseline;
-    width: 915px;
-
+  width: 915px;
 }
 .recomTitle > h3,
 span,
@@ -176,10 +177,8 @@ p {
   height: 210px;
   object-fit: cover;
   border: none;
-  border-radius: 58% 42% 63% 37% / 39% 41% 59% 61% ;
-  padding:10px;
- 
-  
+  border-radius: 58% 42% 63% 37% / 39% 41% 59% 61%;
+  padding: 10px;
 }
 .autoplay img:hover {
   transform: scale(0.9);
@@ -237,14 +236,9 @@ p {
 }
 */
 
-
-
-
-
-
 hr {
   height: 1px;
-  background: #f3e8dc;
+  background: #734e39;
 }
 
 #footer {
