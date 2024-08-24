@@ -24,12 +24,12 @@ body > * {
 .page > * {
   /* border: 1px solid gray; */
 }
-.container > * {
+.content > * {
   /* border: 1px solid gray; */
 }
 .recommend * {
-  /* border: 1px solid gray; */
-}
+/*  border: 1px solid gray;
+*/}
 .sideBar * {
   /* border: 1px solid gray; */
 }
@@ -42,7 +42,7 @@ body {
   display: flex;
 }
 .sideBar,
-.container {
+.content {
   color: #202020;
 }
 .sideBar {
@@ -53,7 +53,7 @@ body {
   /* min-width: 200px;
   max-width: 15%; */
 
-  padding-top: 60px;
+  padding-top: 50px;
   padding-left: 45px;
   /* padding-left: 3%; */
 
@@ -74,6 +74,7 @@ body {
 .sideBar > .menu > .travelGuide {
   font-weight: 500;
   color: #7a7a7a;
+  display: none;
 }
 
 .sideBar > ul {
@@ -91,6 +92,9 @@ body {
 .page {
   float: left;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   /* align-content: center; */
 }
 
@@ -100,6 +104,8 @@ body {
   color: #734e39;
   font-family: "jejumyeongjo", serif;
   padding: 30px 0;
+  width: 1000px;
+  margin:0 auto;
 }
 .header > h1 {
   font-size: 100px;
@@ -135,20 +141,23 @@ body {
   width: 1000px;
 } */
 
-/* 4. container */
-.container {
-  padding: 0 50px;
-  /* margin: auto; */
+/* 4. content */
+.content {
+/*  padding: 0 50px;
+*/  width: 1000px;
+   margin: auto; 
 }
 
 /* 5. recommend */
 .recommend {
   margin-top: 30px;
-  margin: auto;
+  padding: 0 60px;
 }
 .recomTitle {
   display: flex;
   align-items: baseline;
+    width: 915px;
+
 }
 .recomTitle > h3,
 span,
@@ -164,9 +173,14 @@ p {
 }
 
 .autoplay img {
-  width: 300px;
-  height: 200px;
+  width: 290px;
+  height: 210px;
   object-fit: cover;
+  border: none;
+  border-radius: 58% 42% 63% 37% / 39% 41% 59% 61% ;
+  padding:10px;
+ 
+  
 }
 .autoplay img:hover {
   transform: scale(0.9);
@@ -175,7 +189,7 @@ p {
 
 .autoplay {
   /* margin: 0 auto; */
-  width: 940px;
+  width: 914px;
   /* margin: auto; */
   padding: 15px;
   /* display: flex; */
@@ -194,6 +208,7 @@ p {
 
   font-weight: bold;
   color: #7a7a7a;
+  font-size: medium;
 }
 
 .section .ghName {
@@ -210,6 +225,23 @@ p {
   opacity: 0;
   display: none;
 }
+
+/* 여백 30px / -2 설정 
+.slick-margin .slick-list{
+/*  margin: 0 -15px;
+}
+ 여백 30px / 2 설정 
+.slick-margin .slick-slide{
+  height: 200px;
+  margin: 0 15px;
+  background: pink;
+}
+*/
+
+
+
+
+
 
 hr {
   height: 1px;
