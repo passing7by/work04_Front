@@ -27,7 +27,7 @@ body > * {
 .container > * {
   /* border: 1px solid gray; */
 }
-.recommend > * {
+.recommend * {
   /* border: 1px solid gray; */
 }
 .sideBar * {
@@ -91,6 +91,7 @@ body {
 .page {
   float: left;
   flex-grow: 1;
+  /* align-content: center; */
 }
 
 /* 3. header */
@@ -137,11 +138,13 @@ body {
 /* 4. container */
 .container {
   padding: 0 50px;
+  /* margin: auto; */
 }
 
 /* 5. recommend */
 .recommend {
   margin-top: 30px;
+  margin: auto;
 }
 .recomTitle {
   display: flex;
@@ -171,9 +174,11 @@ p {
 }
 
 .autoplay {
-  width: 960px;
-  /* margin: 38px; */
+  /* margin: 0 auto; */
+  width: 940px;
+  /* margin: auto; */
   padding: 15px;
+  /* display: flex; */
 }
 .recomTitle > p {
   color: #7a7a7a;
@@ -204,9 +209,6 @@ p {
 .slick-next::before {
   opacity: 0;
   display: none;
-}
-.item slick-slide slick-active {
-  margin: 5px;
 }
 
 hr {
