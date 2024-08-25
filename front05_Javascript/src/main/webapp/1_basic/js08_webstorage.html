@@ -2,48 +2,54 @@
 브라우저에 데이터를 저장하는 저장소
 WebStorage
 데이터가 저장되는 Scope에 따라서 나뉨
+
 1. Local Storage - 동일한 디바이스, 동일한 브라우저라면 만료기한이 따로 없음
                     웹 페이지가 닫혀지는 것과 무관
 API
-저장        localStorage.setItem("ket","value")
-삭제        localStorage.setItem("ket")
-모두삭제    localStorage.clear("ket","value")
-조회        localStorage.getItem("ket","value")
+저장        localStorage.setItem("key","value")
+삭제        localStorage.setItem("key")
+모두삭제    localStorage.clear("key","value")
+조회        localStorage.getItem("key","value")
             localStorage.length
 
 2. Session Storage - 웹 페이지가 닫혀지면 데이터도 없어짐
-
 -->
+
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
+  <head>
+    <meta charset="utf-8" />
     <title>Page Title</title>
-    <script type="text/javascript">
-        function saveBtn(){
-            localStorage.setItem("key1", "안녕");
-            localStorage.setItem("key2", "hello");
-            localStorage.setItem("key3", "hi");
-        }
-        function delBtn(){
-            localStorage.removeItem("key2");            
-        }
-        function delAllBtn(){
-            localStorage.clear();
-        }
-        function showBtn(){
-            localStorage.getItem("key1")+", "+
-            localStorage.getItem("key2")+", "+
-            localStorage.getItem("key3")+", ";
-        }
 
+    <script type="text/javascript">
+      function saveBtn() {
+        localStorage.setItem("key1", "안녕");
+        localStorage.setItem("key2", "hello");
+        localStorage.setItem("key3", "hi");
+      }
+      function delBtn() {
+        localStorage.removeItem("key2");
+      }
+      function delAllBtn() {
+        localStorage.clear();
+      }
+      function showBtn() {
+        let localData;
+        localData =
+          localStorage.getItem("key1") +
+          ", " +
+          localStorage.getItem("key2") +
+          ", " +
+          localStorage.getItem("key3");
+        alert(localData);
+      }
     </script>
-</head>
-<body>
+  </head>
+
+  <body>
     <button id="saveBtn" onclick="saveBtn()">저장</button>
     <button id="delBtn" onclick="delBtn()">저장</button>
     <button id="delAllBtn" onclick="delAllBtn()">저장</button>
     <button id="showBtn" onclick="showBtn()">저장</button>
-
-</body>
+  </body>
 </html>

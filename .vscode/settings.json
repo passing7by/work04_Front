@@ -1,3 +1,10 @@
 {
-  "liveServer.settings.multiRootWorkspaceName": "work04_Front"
+  "liveServer.settings.multiRootWorkspaceName": "work04_Front",
+  "cSpell.words": [
+    "booleanvar",
+    "functionvar",
+    "numbervar",
+    "objectvar",
+    "wellcome"
+  ]
 }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/login3.css" />
+    <script type="text/javascript">
+      $(function () {
+        $("#video").attr("autoplay", "true");
+        //iframe 자동 재생
+
+        // $("[name=Login]").on("click", function () {
+        //   event.preventDefault();
+        //   var id = $("#id").val();
+        //   var password = $("#password").val();
+        //   localStorage.setItem(id, id);
+        //   location.href = "main3.html?Login=" + id;
+        // });
+        const idForm = document.querySelector("#id");
+        const pwdForm = document.querySelector("#password");
+        const loginBtn = document.querySelector("button");
+        loginBtn.addEventListener("click", function () {
+          let userInfo = { id: idForm.value, pass: pwdForm.value }; //{}는 js 객체인 json
+          //입력받은 값들에 이름을 붙여 제이슨 객체에 모두 담음
+          localStorage.setItem("userInfo", JSON.stringify(userInfo));
+          //로컬스토리지에 (키, 값) 형태로 저장
+          //이 때, 키는 "userInfo", 값은 제이슨 객체를 직렬화한 문자열
+        });
+
+        // $("h3").on("click", function () {
+        //   localStorage.clear();
+        // });
+      }); //ready
+    </script>
+  </head>
+
+  <body>
+    <div class="backboard">
+      <div class="SignInback">
+        <form action="main3.html" class="login">
+          <img src="img/user-profile.png" id="user-profile" />
+          <div class="login__field">
+            <i class="bx bx-user login__icon"></i>
+            <input
+              type="text"
+              class="login__input"
+              id="id"
+              placeholder="User name / Email"
+              required
+            />
+          </div>
+          <div class="login__field">
+            <i class="bx bx-lock login__icon"></i>
+            <input
+              type="password"
+              class="login__input"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <button class="button login__submit" name="Login">
+            <span class="button__text">Log In Now</span>
+            <i class="button__icon fas fa-chevron-right"></i>
+          </button>
+        </form>
+      </div>
+      <div class="content">
+        <div>
+          <p id="title" style="font-family: jejumyeongjo, serif">Nestly</p>
+          <p id="subtitle">편안한 꿈, 여유로운 휴식</p>
+        </div>
+        <video id="video" src="media/healing1.mp4" controls></video>
+      </div>
+    </div>
+  </body>
+</html>
