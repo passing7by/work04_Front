@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>login</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
@@ -30,44 +32,46 @@
   </head>
 
   <body>
-    <div class="backboard">
-      <div class="SignInback">
-        <img src="img/user-profile.png" id="user-profile" />
-        <form action="main.html" class="login">
-          <div class="login__field">
-            <i class="bx bx-user login__icon"></i>
-            <input
-              type="text"
-              class="login__input"
-              id="id"
-              value="User name / Email"
-              onfocus="this.value=''"
-              required="required"
-            />
-          </div>
-          <div class="login__field">
-            <i class="bx bx-lock login__icon"></i>
-            <input
-              type="password"
-              class="login__input"
-              id="password"
-              value="Password"
-              onfocus="this.value=''"
-              required="required"
-            />
-          </div>
-          <button class="button login__submit" name="Login" type="submit">
-            <span class="button__text">Log In Now</span>
-            <i class="button__icon fas fa-chevron-right"></i>
-          </button>
-        </form>
-      </div>
-      <div class="container">
-        <div>
-          <p id="title">Nestly</p>
-          <p id="subtitle">편안한 꿈, 여유로운 휴식</p>
+    <div class="backGround">
+      <div class="backboard">
+        <div class="SignInback">
+          <form action="main.html" class="login">
+            <img src="img/user-profile.png" id="user-profile" />
+            <div class="login__field">
+              <i class="bx bx-user login__icon"></i>
+              <input
+                type="text"
+                class="login__input"
+                id="id"
+                value="User name / Email"
+                onfocus="this.value=''"
+                required="required"
+              />
+            </div>
+            <div class="login__field">
+              <i class="bx bx-lock login__icon"></i>
+              <input
+                type="password"
+                class="login__input"
+                id="password"
+                value="Password"
+                onfocus="this.value=''"
+                required="required"
+              />
+            </div>
+            <button class="button login__submit" name="Login" type="submit">
+              <span class="button__text">Log In Now</span>
+              <i class="button__icon fas fa-chevron-right"></i>
+            </button>
+          </form>
         </div>
-        <video id="video" src="media/healing1.mp4" controls></video>
+        <div class="container">
+          <div>
+            <p id="title">Nestly</p>
+            <p id="subtitle">편안한 꿈, 여유로운 휴식</p>
+          </div>
+          <video id="video" src="media/healing1.mp4" controls></video>
+        </div>
       </div>
     </div>
   </body>
