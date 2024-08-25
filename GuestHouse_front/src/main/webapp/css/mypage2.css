@@ -8,23 +8,30 @@
   font-style: normal;
 }
 
-* {
-  border: 1px solid #898989;
+@font-face {
+  font-family: "jejumyeongjo";
+  src: url("//fonts.googleapis.com/earlyaccess/jejumyeongjo.css");
 }
+
+/* * {
+  border: 1px solid #898989;
+} */
 
 *,
 ::before,
 ::after {
   box-sizing: border-box;
+  font-family: "SpoqaHanSansNeo-Regular";
 }
 
 body {
   background-color: rgba(254, 248, 240, 1);
-  height: 915px;
-  padding-top: 5px;
+  /* padding-top: 5px; */
   display: grid;
   grid-template-columns: 0.5fr 10fr;
   font-family: "SpoqaHanSansNeo-Regular";
+  display: flex;
+  margin: 0;
 }
 
 a {
@@ -41,6 +48,7 @@ a {
   padding-left: 10%;
   background: #f3e8dc;
   border-radius: 0 20px 20px 0; */
+  /* 삭제 - 지남 */
 
   float: left;
   flex-grow: 0;
@@ -58,6 +66,7 @@ a {
 
   font-size: large;
   font-weight: bold;
+  /* 추가 - 지남 */
 }
 
 .sideBar > .menu a {
@@ -66,6 +75,7 @@ a {
 }
 .sideBar > .wellcomeMsg {
   font-size: medium;
+  margin-bottom: 16px;
 }
 .travelGuide {
   font-weight: 500;
@@ -88,6 +98,7 @@ a {
 .sideBar > ul > #loction {
   margin-top: 26px;
 }
+/* 사이드바 css 추가 */
 
 .custCenter {
   margin-top: 300px;
@@ -97,30 +108,47 @@ a {
   color: #898989;
 }
 
+.content {
+  padding: 0 60px;
+}
+
 .title {
   font-family: "Jeju Myeongjo", serif;
   color: #734e39;
-  font-size: 96px;
+  font-size: 100px;
   margin-top: 1%;
   text-align: center;
+
+  padding: 30px 0;
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .main {
-  display: grid;
-  width: 95%;
-  padding-left: 120px;
-  padding-bottom: 30px;
+  /* display: grid; */
+  /* padding-left: 120px;
+  padding-bottom: 30px; */
   grid-template-rows: 100px 0.3fr 0.5fr;
+
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .chart {
-  display: grid;
-  margin: 3%;
+  /* display:</div> grid; */
+  /* margin: 3%;
   padding-left: 2%;
-  padding-right: 2%;
-  grid-template-columns: 1.2fr 1.5fr 1fr;
-  grid-auto-rows: minmax(200px, auto);
-  column-gap: 50px;
+  padding-right: 2%; */
+  /* grid-template-columns: 1.2fr 1.5fr 1fr;
+  grid-auto-rows: minmax(200px, auto); */
+  column-gap: 15px;
+
+  display: flex;
+  margin-bottom: 15px;
+  height: 380px;
 }
 
 .gender-container {
@@ -129,20 +157,26 @@ a {
   box-shadow: 5px 5px 5px rgb(177, 177, 177);
   display: flex;
   flex-direction: column;
-  margin-left: 70px;
-  padding: 10px;
+  /* padding: 10px; */
 }
 #gender {
   font-size: 20px;
-  padding-left: 3%;
-  padding-top: 3%;
+  font-weight: bold;
+  padding: 20px;
   /* margin-bottom: 12%; */
 }
 #pie-chart {
   display: flex;
   flex-direction: column;
-  margin-left: 18%;
+  /* margin-left: 18%; */
+  padding: 30px;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 .no_dot {
   list-style-type: none;
 }
@@ -150,93 +184,118 @@ a {
 .monthly-container {
   background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 10px 5px 5px rgb(177, 177, 177);
+  box-shadow: 5px 5px 5px rgb(177, 177, 177);
 }
 #bar-chart {
-  margin-left: 4%;
+  padding: 30px;
 }
 
 #total-sales-text {
   font-size: 20px;
-  padding-top: 5%;
-  padding-left: 5%;
+  font-weight: bold;
+  padding: 20px 20px 10px 20px;
 }
 
 #total-sales-won {
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bold;
   text-align: right;
-  margin-top: 30px;
-  padding-right: 6%;
+  padding-right: 20px;
+  margin-top: 10px;
 }
 #monthly {
   font-size: 20px;
-  padding-left: 3%;
-  padding-top: 3%;
-  margin-bottom: 12%;
+  font-weight: bold;
+  padding: 20px;
 }
 #august {
   font-size: 20px;
-  padding-left: 3%;
-  padding-top: 3%;
+  font-weight: bold;
+  padding: 20px 20px 10px 20px;
 }
 
 .room-status {
   padding: 6%;
 }
 
+.mystate {
+  margin: 0;
+  border: none;
+  width: 100%;
+}
+
 .total-sales {
   background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 10px 5px 5px rgb(177, 177, 177);
-  margin-right: 70px;
+  box-shadow: 5px 5px 5px rgb(177, 177, 177);
+  /* margin-right: 70px; */
   height: 30%;
+  margin-bottom: 10px;
 }
 
 .reservation-status {
   background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 10px 5px 5px rgb(177, 177, 177);
-  margin-right: 70px;
-  height: 67%;
-  padding-bottom: 1%;
+  box-shadow: 5px 5px 5px rgb(177, 177, 177);
+  /* margin-right: 70px; */
+  height: 253px;
+  /* padding-bottom: 1%; */
 }
 
 .yearly-container {
   background-color: #ffffff;
-  margin: 0 140px;
+  /*margin: 0 140px;*/
   border-radius: 10px;
-  box-shadow: 10px 5px 5px rgb(177, 177, 177);
+  box-shadow: 5px 5px 5px rgb(177, 177, 177);
+  width: 100%;
 }
 
 #Sales-trend {
   font-size: 20px;
-  padding: 2% 0px 0px 2%;
+  font-weight: bold;
+  padding: 20px 20px 10px 20px;
 }
 
 #line-chart {
-  padding-left: 2%;
+  padding: 30px;
+  width: 100%;
+  /* height: 200px; */
 }
 .progress-bar {
   background-color: #70b6c1;
+  width: 100px;
+}
+
+.room {
+  margin: 5px;
 }
 #rooms-101 {
-  margin-top: -7px;
+  width: 20%;
   font-size: 15px;
 }
 
 #rooms-102 {
-  margin-top: 10px;
+  width: 20%;
+
   font-size: 15px;
 }
 
 #rooms-103 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  width: 20%;
+
   font-size: 15px;
 }
 
 #Sales-trend-won {
-  font-size: 20px;
+  font-size: 30px;
   padding-left: 2%;
-  color: #898989;
+  font-weight: bold;
+}
+
+#footer {
+  height: 180px;
+  padding: 30px;
+  color: #7a7a7a;
+  font-size: small;
+  margin-top: 300px;
 }

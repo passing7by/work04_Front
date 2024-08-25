@@ -19,25 +19,30 @@
 
     <!-- jQuery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 제이쿼리 cdn 추가 - 지남 -->
 
     <script type="text/javascript">
       $(function () {
+        $("#travelGuide").click(function () {
+          $(".travelGuide").slideToggle(900);
+        });
+        //사이드바-여행가이드 서브메뉴 토글 효과 - 지남
+
         var storedId = localStorage.getItem("userInfo");
         if (storedId) {
           $(".wellcomeMsg").text(storedId + "님 환영합니다.");
         } else {
           $(".wellcomeMsg").text("환영합니다.");
         }
-        $("legend-div").html = window.pieChart.generateLegend();
 
-        $("#travelGuide").click(function () {
-          $(".travelGuide").slideToggle(900);
-        });
+        $("legend-div").html = window.pieChart.generateLegend();
       });
     </script>
   </head>
 
-  <body>
+  <body style="background: #fffbf7">
+    <!-- 배경색 추가 - 지남 -->
+
     <!-- 1. 사이드 바 -->
     <!-- <div class="sideBar">
 		<h5 class="wellcomeMsg" style="font-weight:bolder"> oo님 환영합니다.</h5>
@@ -54,10 +59,11 @@
 		<br><br>
 		<h5 class="custCenter" style="font-weight:bolder">고객센터</h5>
 	</div> -->
+    <!-- 이전 사이드바 삭제 - 지남 -->
 
     <!-- 1. 사이드 바 -->
     <div class="sideBar">
-      <div class="wellcomeMsg"><p>${param.id}님 환영합니다.</p></div>
+      <div class="wellcomeMsg"><p>환영합니다.</p></div>
       <br /><br />
 
       <div class="menu"><p>메인화면</p></div>
@@ -78,49 +84,75 @@
 
       <div class="menu"><p>고객센터</p></div>
     </div>
+    <!-- 수정된 사이드바 추가 - 지남 -->
 
     <!-- 1. main -->
     <div class="main">
-      <h1 class="title">Nestly</h1>
+      <h1 class="title" style="font-family: jejumyeongjo, serif">Nestly</h1>
+
       <!-- 1. 차트 구간 -->
-      <div class="chart">
-        <div class="gender-container">
-          <h2 id="gender">고객성비</h2>
-          <canvas id="pie-chart" width="230" height="200"></canvas>
-          <div id="legend-div" class="legend-div"></div>
-        </div>
-        <div class="monthly-container">
-          <h2 id="monthly">월별 예약 건수</h2>
-          <canvas id="bar-chart" width="450" height="200"></canvas>
-        </div>
-        <div class="mystate">
-          <div class="total-sales">
-            <h2 id="total-sales-text">총매출</h2>
-            <h2 id="total-sales-won">￦165,750.23</h2>
+      <div class="content">
+        <div class="chart">
+          <div class="gender-container">
+            <h2 id="gender">고객성비</h2>
+            <canvas id="pie-chart" width="230" height="220"></canvas>
+            <div id="legend-div" class="legend-div"></div>
           </div>
-          <div class="reservation-status">
-            <h2 id="august">8월 예약 현황</h2>
-            <div class="room-status">
-              <h5 id="rooms-101">101호</h5>
-              <div class="progress">
-                <div class="progress-bar" style="width: 30%"></div>
-              </div>
-              <h5 id="rooms-102">102호</h5>
-              <div class="progress">
-                <div class="progress-bar" style="width: 70%"></div>
-              </div>
-              <h5 id="rooms-103">103호</h5>
-              <div class="progress">
-                <div class="progress-bar" style="width: 60%"></div>
+          <div class="monthly-container">
+            <h2 id="monthly">월별 예약 건수</h2>
+            <canvas id="bar-chart" width="360" height="300"></canvas>
+          </div>
+          <div class="mystate">
+            <div class="total-sales">
+              <h2 id="total-sales-text">총매출</h2>
+              <h2 id="total-sales-won">￦165,750.23</h2>
+            </div>
+            <div class="reservation-status">
+              <h2 id="august">8월 예약 현황</h2>
+              <div class="room-status">
+                <div class="room">
+                  <h5 id="rooms-101">101호</h5>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 30%"></div>
+                  </div>
+                </div>
+
+                <div class="room">
+                  <h5 id="rooms-102">102호</h5>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 70%"></div>
+                  </div>
+                </div>
+
+                <div class="room">
+                  <h5 id="rooms-103">103호</h5>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 60%"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="chart">
+          <div class="yearly-container">
+            <h2 id="Sales-trend">2024년 매출 추이</h2>
+            <h2 id="Sales-trend-won">￦165,750.23</h2>
+            <canvas id="line-chart" height="270"></canvas>
+          </div>
+        </div>
       </div>
-      <div class="yearly-container">
-        <h2 id="Sales-trend">2024년 매출 추이</h2>
-        <h2 id="Sales-trend-won">￦165,750.23</h2>
-        <canvas id="line-chart" width="1200" height="250"></canvas>
+
+      <div id="footer">
+        <p>
+          주소 : 서울특별시 oo구 ooo로 111, oo타워 10층 | 대표자 : ooo |
+          사업자등록번호 : 111-11-11111
+        </p>
+        <p>
+          (주)네스틀리는 통신판매중개자로서 통신판매의 당사자가 아니며, 상품의
+          예약, 이용 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.
+        </p>
+        <p>Copyright NT COMPANY Corp. All rights reserved.</p>
       </div>
     </div>
     <script src="chart.js"></script>
