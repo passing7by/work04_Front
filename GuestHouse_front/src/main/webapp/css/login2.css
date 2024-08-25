@@ -7,6 +7,12 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "jejumyeongjo";
+  src: url("//fonts.googleapis.com/earlyaccess/jejumyeongjo.css");
+}
+
 * {
   /* border: 1px solid gray; */
 }
