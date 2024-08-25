@@ -1,0 +1,154 @@
+@import url('//fonts.googleapis.com/earlyaccess/jejumyeongjo.css');
+
+@font-face {
+	font-family: 'SpoqaHanSansNeo-Regular';
+	src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+#user-profile{
+	width: 60px;
+	height: 60px;
+	margin-left: 43%;
+	margin-top: 8%;
+}
+
+body {
+	font-family: 'SpoqaHanSansNeo-Regular';
+	background-image: url(../img/login_image2.jpg); 
+	 background-size: cover; 
+background-position: center; 
+image-rendering: -webkit-optimize-contrast; 
+background-color: rgba(254, 248, 240, 1);
+transform: translateZ(0);
+
+backface-visibility: hidden;
+}
+
+.backboard {
+	background-color: rgba(255, 255, 255, 0.9);
+	display: flex;
+	display: inline-grid;
+	justify-content: space-between;
+	 align-items: center; 
+	grid-template-columns: 2fr 1fr;
+	margin-top: 1%;
+	margin-left: 20%; 
+	margin-right: 20%;
+	
+}
+
+.SignInback {
+	background-color: #F3E8DC;
+	border-radius: 10px;
+	margin: 3%;
+    margin-right: 20%;
+	margin-left: 10%;
+}
+h1{
+	text-align: center;
+	margin-top: 15px;
+	font-size: 64px;
+	color: #734E39;
+	margin-bottom: initial;
+
+}
+.login {
+	padding: 20px;
+	border-radius: 10px;
+	margin-right: 15%;
+  }
+  
+  .login__field {
+	padding: 20px 0px;  
+	position: relative; 
+  }
+  
+  .login__icon {
+	position: absolute;
+	top: 27px;
+	left: 30px;
+	font-size:2rem;
+	color: #C0C0C0;
+  }
+  
+  .login__input {
+	background-color: #ffff;
+	border: none;
+	border-radius: 10px;
+	border-bottom: 2px solid #D1D1D4;
+	color: #C3C2C2;
+	padding: 10px;
+	padding-left:80px;
+	font-size: 15px;
+	font-weight: 700;
+	width: 330px;
+	height:50px;
+	transition: .2s;
+  }
+  
+  .login__input:active,
+  .login__input:focus,
+  .login__input:hover {
+	outline: none;
+	border-bottom-color: #734E39;
+  }
+  
+  .login__submit {
+	background: #D8C4B2;
+	margin-top: 120px;
+	padding-left: 38%;
+	border-radius: 10px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-size: 15px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	width: 330px;
+	height: 50px;
+	font-weight: 700;
+	color: #FFFFFF;
+	box-shadow: 0px 2px 2px #6b6b6b;
+	cursor: pointer;
+	transition: .2s;
+  }
+  
+  .login__submit:active,
+  .login__submit:focus,
+  .login__submit:hover {
+	border-color: #734E39;
+	outline: none;
+  }
+  
+ 
+
+.container {
+	margin-right: 10%;
+	display: flex;
+	flex-direction: column;
+}
+#title{
+	font-family: 'Jeju Myeongjo', serif;
+font-size: 128px;
+height: 100px;
+text-align: right;
+color: #734E39;
+}
+#subtitle{
+	color: #C3C2C2;
+	font-size: 40px;
+	text-align: right;
+}
+
+video {
+	width: 560px;
+	height: 347px;
+	margin-right: 50px;
+	margin-bottom: 30px;
+}
