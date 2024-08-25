@@ -74,6 +74,10 @@
             "<button type='button' class='slick-prev' style='width: 50px; height:300px'>Prev</button>",
           //슬라이드 버튼 스타일 수정
         });
+
+        $("#travelGuide").click(function () {
+          $(".travelGuide").slideToggle(900);
+        });
       });
     </script>
   </head>
@@ -87,12 +91,14 @@
       <div class="menu"><p>메인화면</p></div>
       <br />
 
-      <ul class="menu">
-        <p>여행가이드</p>
-        <li class="travelGuide" id="loction"><p>지역별</p></li>
-        <li class="travelGuide" id="price"><p>가격별</p></li>
-        <li class="travelGuide" id="score"><p>만족도별</p></li>
-      </ul>
+      <div class="menu">
+        <ul id="travelGuide">
+          <a href="#">여행가이드</a>
+          <li class="travelGuide" id="loction"><p>지역별</p></li>
+          <li class="travelGuide" id="price"><p>가격별</p></li>
+          <li class="travelGuide" id="score"><p>만족도별</p></li>
+        </ul>
+      </div>
       <br />
 
       <div class="menu"><a href="./mypage.html">마이페이지</a></div>
