@@ -118,33 +118,80 @@
               <div class="room-status">
                 <div class="room">
                   <h5 id="rooms-101">101호</h5>
-                  <div class="progress">
-                    <div class="progress-bar" style="width: 30%"></div>
+                  <div
+                    class="progress"
+                    style="border: none; border-radius: 15px"
+                  >
+                    <div
+                      class="progress-bar"
+                      style="
+                        width: 30%;
+                        background: #70b6c1;
+                        border: none;
+                        border-radius: 15px;
+                      "
+                    ></div>
                   </div>
                 </div>
 
                 <div class="room">
                   <h5 id="rooms-102">102호</h5>
-                  <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
+                  <div
+                    class="progress"
+                    style="border: none; border-radius: 15px"
+                  >
+                    <div
+                      class="progress-bar"
+                      style="
+                        width: 70%;
+                        background: #70b6c1;
+                        border: none;
+                        border-radius: 15px;
+                      "
+                    ></div>
                   </div>
                 </div>
 
                 <div class="room">
                   <h5 id="rooms-103">103호</h5>
-                  <div class="progress">
-                    <div class="progress-bar" style="width: 60%"></div>
+                  <div
+                    class="progress"
+                    style="border: none; border-radius: 15px"
+                  >
+                    <div
+                      class="progress-bar"
+                      style="
+                        width: 60%;
+                        background: #70b6c1;
+                        border: none;
+                        border-radius: 15px;
+                      "
+                    ></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <div class="chart">
           <div class="yearly-container">
             <h2 id="Sales-trend">2024년 매출 추이</h2>
             <h2 id="Sales-trend-won">￦165,750.23</h2>
             <canvas id="line-chart" height="270"></canvas>
+          </div>
+        </div>
+
+        <div class="chart">
+          <div id="good">
+            <h2 id="good-title">연령별 만족도</h2>
+            <canvas id="bar-chart2" height="305" width="433px"></canvas>
+            <!-- todo -->
+          </div>
+          <div id="jmt">
+            <h2 id="jmt-title">근처 맛집 분포도</h2>
+            <canvas id="bubble-chart" height="255"></canvas>
+            <!-- todo -->
           </div>
         </div>
       </div>

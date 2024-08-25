@@ -198,7 +198,7 @@ ul {
   box-shadow: 5px 5px 5px rgb(177, 177, 177);
 }
 #bar-chart {
-  padding: 30px;
+  padding: 15px 30px 30px 30px;
 }
 
 #total-sales-text {
@@ -226,7 +226,7 @@ ul {
 }
 
 .room-status {
-  padding: 6%;
+  padding: 10px 20px 20px 20px;
 }
 
 .mystate {
@@ -272,13 +272,12 @@ ul {
   width: 100%;
   /* height: 200px; */
 }
-.progress-bar {
-  background-color: #70b6c1;
-  width: 100px;
-}
 
 .room {
   margin: 5px;
+}
+.progress {
+  margin-bottom: 10px;
 }
 #rooms-101 {
   width: 20%;
@@ -301,6 +300,44 @@ ul {
   font-size: 30px;
   padding-left: 2%;
   font-weight: bold;
+}
+
+#good-title {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+}
+#jmt-title {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+}
+#bar-chart2 {
+  padding: 15px 30px 30px 30px;
+}
+#bubble-chart {
+  padding: 10px 30px 30px 30px;
+}
+#good {
+  background-color: #ffffff;
+  /*margin: 0 140px;*/
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(177, 177, 177);
+  width: 100%;
+}
+#jmt {
+  background-color: #ffffff;
+  /*margin: 0 140px;*/
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(177, 177, 177);
+  width: 100%;
+}
+
+#good * {
+  /* border: 1px solid gray; */
+}
+#jmt * {
+  /* border: 1px solid gray; */
 }
 
 #footer {
