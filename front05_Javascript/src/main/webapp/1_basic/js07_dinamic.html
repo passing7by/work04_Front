@@ -1,4 +1,4 @@
-    <!-- 
+<!-- 
     script 부분을 완성
     1. 버튼 클릭하면 span 영역이 보이도록 작성
     2. id가 hello인 영역의 내용을 Hello로 변경
@@ -6,45 +6,52 @@
     3. id가 edu인 영역의 내용을 BootCamp로 변경
     글자색은 blue로 지정
     -->
+
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>title</title>
+
     <script type="text/javascript">
-        function push(){
-            document.querySelector('.edit').setAttribute('style', 'display: block');
-        }
+      function push() {
+        document.querySelector(".edit").setAttribute("style", "display: block");
+      } //push
+      //onload 바깥 -> <body> 부분이 로드되기 전에 올라감
+      //<body> 부분에 새로운 요소를 덧붙임...요소를 로드해 올 필요가 없음
 
-        window.onload = ()=>{
-            function changeText(){
-                document.querySelector('#hello').innerHTML="Hello";
-                document.querySelector('#hello').style.color='red';
+      // window.onload = () => {
+      //   function changeText() {
+      //     document.querySelector("#hello").innerHTML = "Hello";
+      //     document.querySelector("#hello").style.color = "red";
 
-                document.querySelector('#edu').innerHTML="BootCamp";
-                document.querySelector('#edu').style.color='blue';
-            }
-            
-            changeText();
-        }
+      //     document.querySelector("#edu").innerHTML = "BootCamp";
+      //     document.querySelector("#edu").style.color = "blue";
+      //   } //changeText
+
+      //   changeText();
+      // };
+      //onload 안 -> <body> 부분이 모두 로드된 후 올라감
+      //<body> 부분의 요소를 로드해 와서 수정해야 함
     </script>
-    <style type="text/css">
-        .edit{
-            display: none;
-        }
-    </style>
-</head>
 
-<body>
+    <!-- <script src="./function.js"></script> -->
+    <script async src="./function.js"></script>
+    <!-- <script defer src="./function.js"></script> -->
+
+    <style type="text/css">
+      .edit {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
     <h2 id="hello">안녕하세요</h2>
     <h2 id="edu">Kosta</h2>
-    <hr>
+    <hr />
 
     <button onclick="push()">Input Name</button>
-    <span class="edit">
-        Name<input type="text">
-    </span>
-</body>
-
+    <span class="edit"> Name<input type="text" /> </span>
+  </body>
 </html>
