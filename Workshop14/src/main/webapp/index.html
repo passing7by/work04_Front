@@ -51,6 +51,8 @@
         $("[name=cartinsert]").on("click", function () {
           alert("찜 목록에 추가되었습니다.");
           localStorage.setItem($(this).attr("id"), $(this).val());
+          //[나중에 찜 목록을 보여줄 때, id, 영화제목, 영화이미지를 보여주려고 함]
+          //[=> 찜하기 버튼을 클릭했을 때, 해당 버튼의 value값을 로.스에 저장]
         });
       }); //ready
     </script>
